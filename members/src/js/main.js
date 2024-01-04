@@ -510,9 +510,14 @@ function generateImage() {
   const tzoffset = (new Date()).getTimezoneOffset() * 60000;
   const filename = 'sort-' + (new Date(timeFinished - tzoffset)).toISOString().slice(0, -5).replace('T', '(') + ').png';
 
-  html2canvas(document.querySelector('.result-container'), {scrollY: -window.scrollY}).then(canvas => {
+  const height = document.querySelector('.result-container').scrollHeight;
+
+  html2canvas(document.querySelector('.result-container'), {
+    height: height,
+    windowHeight: height,
+    scrollY: -window.scrollY,
+  }).then(canvas => {
     const dataURL = canvas.toDataURL();
-    console.log(dataURL)
     const imgButton = document.querySelector('.finished.getimg.button');
     const resetButton = document.createElement('a');
 
