@@ -346,6 +346,7 @@ a:hover {
 .result-container {
   padding-top: 20px;
   text-align: center;
+  background-color: #210b64;
 }
 
 .result-container > h1 {
@@ -371,8 +372,8 @@ a:hover {
 
 .result-card {
   display: grid;
-  border: 1px solid #210b64;
   border-radius: 10px;
+  border: 1px solid white;
   overflow: hidden;
   box-sizing: border-box;
   width: 15%;
@@ -425,7 +426,6 @@ a:hover {
 @media (max-width: 1300px) {
   .result-card {
     display: grid;
-    border: 1px solid #210b64;
     border-radius: 10px;
     overflow: hidden;
     box-sizing: border-box;
@@ -459,7 +459,6 @@ a:hover {
 
   .result-card {
     display: grid;
-    border: 1px solid #210b64;
     border-radius: 10px;
     overflow: hidden;
     box-sizing: border-box;
@@ -490,7 +489,6 @@ a:hover {
 @media (max-width: 700px) {
   .result-card {
     display: grid;
-    border: 1px solid #210b64;
     border-radius: 10px;
     overflow: hidden;
     box-sizing: border-box;
