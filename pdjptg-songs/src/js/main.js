@@ -48,19 +48,19 @@ let totalBattles    = 0;
 let sorterURL       = window.location.host + window.location.pathname;
 let storedSaveType  = localStorage.getItem(`${sorterURL}_saveType`);
 
+let sorterSrc = "pdjptg-songs";
+
 /** Initialize script. */
 function init() {
 
   /** Define button behavior. */
   document.querySelector('.starting.start.button').addEventListener('click', start);
-  document.querySelector('.starting.load.button').addEventListener('click', loadProgress);
 
   document.querySelector('.left.sort.image').addEventListener('click', () => pick('left'));
   document.querySelector('.right.sort.image').addEventListener('click', () => pick('right'));
   
   document.querySelector('.sorting.tie.button').addEventListener('click', () => pick('tie'));
   document.querySelector('.sorting.undo.button').addEventListener('click', undo);
-  document.querySelector('.sorting.save.button').addEventListener('click', () => saveProgress('Progress'));
   
   document.querySelector('.finished.getimg.button').addEventListener('click', generateImage);
   document.querySelector('.finished.list.button').addEventListener('click', generateTextList);
@@ -101,15 +101,6 @@ function init() {
     select.value = i;
     select.text = i;
     if (i === 3) { select.selected = 'selected'; }
-  }
-
-  /** Show load button if save data exists. */
-  if (storedSaveType) {
-    document.querySelector('.starting.load.button > span').insertAdjacentText('beforeend', storedSaveType);
-    document.querySelectorAll('.starting.button').forEach(el => {
-      el.style['grid-row'] = 'span 3';
-      el.style.display = 'block';
-    });
   }
 
   setLatestDataset();
@@ -511,10 +502,6 @@ function generateImage() {
   const height = document.querySelector('.result-container').scrollHeight;
 
   html2canvas(document.querySelector('.result-container'), {
-    height: height,
-    windowHeight: height,
-    scrollY: -window.scrollY,
-    background-color:
   }).then(canvas => {
     const dataURL = canvas.toDataURL();
     const imgButton = document.querySelector('.finished.getimg.button');
@@ -561,7 +548,7 @@ function setLatestDataset() {
       return currentDate > array[latestDateIndex] ? currentIndex : latestDateIndex;
     }, 0);
   currentVersion = Object.keys(dataSet)[latestDateIndex];
-  characterData = dataSet["members"].characterData;
+  characterData = dataSet[sorterSrc].characterData;
 }
 
 /**
@@ -613,7 +600,7 @@ function decodeQuery(queryString = window.location.search.slice(1)) {
       currentVersion = dateMap[timeError ? afterDateIndex : beforeDateIndex].str;
     }
     
-    characterData = dataSet["members"].characterData;
+    characterData = dataSet[sorterSrc].characterData;
 
     let suboptDecodedIndex = 0;
     options.forEach((opt, index) => {

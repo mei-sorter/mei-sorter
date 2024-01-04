@@ -3,6 +3,10 @@ dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].characterData = [
   {
+    name: "LEAP HIGH!",
+    img: "/pdjptg-songs/leaphigh.jpg",
+  },
+  {
     name: "AtoZ",
     img: "/pdjptg-songs/atoz.jpg",
   },
