@@ -511,9 +511,10 @@ function generateImage() {
   const height = document.querySelector('.result-container').scrollHeight;
 
   html2canvas(document.querySelector('.result-container'), {
-    height: height + 100,
-    windowHeight: height + 100,
+    height: height,
+    windowHeight: height,
     scrollY: -window.scrollY,
+    background-color:
   }).then(canvas => {
     const dataURL = canvas.toDataURL();
     const imgButton = document.querySelector('.finished.getimg.button');
