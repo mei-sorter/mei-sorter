@@ -65,8 +65,6 @@ function init() {
   document.querySelector('.finished.getimg.button').addEventListener('click', generateImage);
   document.querySelector('.finished.list.button').addEventListener('click', generateTextList);
 
-  document.querySelector('.clearsave').addEventListener('click', clearProgress);
-
   /** Define keyboard controls (up/down/left/right vimlike k/j/h/l). */
   document.addEventListener('keypress', (ev) => {
     /** If sorting is in progress. */
