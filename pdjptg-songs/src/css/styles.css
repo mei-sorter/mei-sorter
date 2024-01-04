@@ -254,8 +254,6 @@ label:hover {
 @media all and (min-width: 600px) {
   .results {
     flex-flow: row wrap;
-    max-height: calc(5 * (175px + 2px) + 1 * (15px + 2px));
-    /* 2px for borders */
   }
 }
 
