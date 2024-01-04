@@ -25,6 +25,7 @@ body {
   row-gap: 20px;
   flex-direction: column;
   width: 600px;
+  padding-bottom: 20px;
 }
 
 .progress {
@@ -426,7 +427,7 @@ a:hover {
 @media (max-width: 1300px) {
   .result-card {
     display: grid;
-    border: 1px solid white;
+    border: 1px solid #210b64;
     border-radius: 10px;
     overflow: hidden;
     box-sizing: border-box;
