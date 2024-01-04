@@ -397,6 +397,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 40px;
 }
 
 .result-name {
@@ -408,6 +409,10 @@ a:hover {
   font-size: 20px;
   font-weight: bold;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
 .starting.select > select {
