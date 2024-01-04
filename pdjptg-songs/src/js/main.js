@@ -510,9 +510,14 @@ function generateImage() {
   const tzoffset = (new Date()).getTimezoneOffset() * 60000;
   const filename = 'sort-' + (new Date(timeFinished - tzoffset)).toISOString().slice(0, -5).replace('T', '(') + ').png';
 
-  html2canvas(document.querySelector('.result-container'), {scrollY: -window.scrollY}).then(canvas => {
+  const height = document.querySelector('.result-container').scrollHeight;
+
+  html2canvas(document.querySelector('.result-container'), {
+    height: height,
+    windowHeight: height,
+    scrollY: -window.scrollY,
+  }).then(canvas => {
     const dataURL = canvas.toDataURL();
-    console.log(dataURL)
     const imgButton = document.querySelector('.finished.getimg.button');
     const resetButton = document.createElement('a');
 
@@ -557,7 +562,7 @@ function setLatestDataset() {
       return currentDate > array[latestDateIndex] ? currentIndex : latestDateIndex;
     }, 0);
   currentVersion = Object.keys(dataSet)[latestDateIndex];
-  characterData = dataSet["pdjptg-songs"].characterData;
+  characterData = dataSet["members"].characterData;
 }
 
 /**
@@ -609,7 +614,7 @@ function decodeQuery(queryString = window.location.search.slice(1)) {
       currentVersion = dateMap[timeError ? afterDateIndex : beforeDateIndex].str;
     }
     
-    characterData = dataSet["pdjptg-songs"].characterData;
+    characterData = dataSet["members"].characterData;
 
     let suboptDecodedIndex = 0;
     options.forEach((opt, index) => {
