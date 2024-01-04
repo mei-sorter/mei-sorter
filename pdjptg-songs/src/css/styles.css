@@ -346,7 +346,6 @@ a:hover {
 .result-container {
   padding-top: 20px;
   text-align: center;
-  background-color: #210b64;
   padding-bottom: 60px;
 }
 
@@ -374,7 +373,7 @@ a:hover {
 .result-card {
   display: grid;
   border-radius: 10px;
-  border: 1px solid white;
+  border: 1px solid #210b64;
   overflow: hidden;
   box-sizing: border-box;
   width: 15%;
