@@ -15,7 +15,7 @@ dataSet[dataSetVersion].characterData = [
     img: "/pdjptg-songs/andMe.jpg",
   },
   {
-    name: "小悪魔 (Baddie)",
+    name: "小悪魔 <br> (Baddie)",
     img: "/pdjptg-songs/baddie.jpg",
   },
   {
@@ -31,7 +31,7 @@ dataSet[dataSetVersion].characterData = [
     img: "/pdjptg-songs/popcorn.jpg",
   },
   {
-    name: "想像以上 (Sozo Ijou)",
+    name: "想像以上 <br> (Sozo Ijou)",
     img: "/pdjptg-songs/sozoijou.jpg",
   },
   {
