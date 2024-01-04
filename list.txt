@@ -1,0 +1,2 @@
+Background = mei header color
+Important thing = pink
