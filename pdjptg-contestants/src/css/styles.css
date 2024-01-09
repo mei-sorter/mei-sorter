@@ -221,7 +221,7 @@ label {
 }
 
 label:hover {
-  color: #990000;
+  color: rgb(238, 95, 207);
 }
 
 .options > .large.option, .options > hr {
