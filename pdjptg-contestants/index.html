@@ -1,0 +1,114 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" href="src/assets/mei.ico" type="image/x-icon">
+  <link rel="icon" href="src/assets/mei.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="og:site_name" content="ME:I Bias Sorter">
+  <meta name="og:description" content="A simple website to find out your ME:I oshimen!">
+  <meta name="og:image" content="pdjptg-contestants/src/assets/mei.ico">
+  <title>PDJPTG Songs Sorter</title>
+
+  <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+
+  <script src="src/js/data.js"></script>
+  <script src="src/js/data/2024-01-03.js"></script>
+  <script src="src/js/data/members.js"></script>
+  <script src="src/js/data/pdjptg-contestants.js"></script>
+
+  <script src="src/js/html2canvas.min.js"></script>
+  <script src="src/js/lz-string.min.js"></script>
+  <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/main.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="container-sorter">
+        <div class="progress">
+            <div class="progressbattle"></div>
+            <div class="progressbar">
+                <div class="progressfill"><span class="progresstext"></span></div>
+            </div>
+        </div>
+    
+        <div class="sorter">
+            <img src="src/assets/default.png" class="left sort image">
+    
+            <div class="starting start button">Produce 101 Japan The Girls Sorter<br><br>Click to Start!</div>
+            <div class="loading button"><div></div><span>Loading...</span></div>
+    
+            <div class="sorting tie button">Tie</div>
+            <div class="sorting undo button">Undo</div>
+    
+            <div class="finished getimg button">Generate Image</div>
+            <div class="finished list button">Generate Text List</div>
+    
+            <img src="src/assets/default.png" class="right sort image">
+    
+            <div class="left sort text"><p></p></div>
+            <div class="right sort text"><p></p></div>
+        </div>
+
+        <fieldse id="filter">
+            <legend>Select filter:</legend>
+            <br>
+            <div>
+              <input type="radio" id="top20" name="filter" value="20" checked />
+              <label for="top20">Top 20</label>
+            </div>
+            <div>
+                <input type="radio" id="top35" name="filter" value="35" checked />
+                <label for="top35">Top 35</label>
+            </div>
+            <div>
+                <input type="radio" id="top50" name="filter" value="50" checked />
+                <label for="top50">Top 50</label>
+            </div>
+            <div>
+                <input type="radio" id="top96" name="filter" value="50" checked />
+                <label for="top50">All contestants</label>
+            </div>
+        </fieldse>
+          
+
+        <div class="options"></div>
+
+    </div>
+    <div class="home">
+        <a href="../index.html"><img src="../src/assets/icons8-home.svg" alt="" class="home image"></a>
+    </div>
+    <div class="result-container hidden">
+        <h1>Result</h1>
+        <div class="results img"></div>
+        <div class="results text"></div>
+        <p>ME:I Sorter: <a href="https://mei-sorter.github.io/members/index.html">mei-sorter.github.io.</a>
+    </div>
+
+    <div class="info">
+        <p>Find your ME:I oshimen!</p>
+        <p>Click on the option you like better from the two, or tie them if you like them equally.</p>
+
+        <br><br>
+
+        <p>Keyboard controls during sorting:
+            <br>H: pick left
+            <br>J: undo
+            <br>K: tie
+            <br>L: pick right
+        </p>
+        <p>Before sorting: 
+            <br>S/Enter (start sorting) 
+        <p>1/2/3 always correspond to the first/second/third buttons.</p>
+        
+        <br><br>
+
+        <p>Inspired by <a href="https://execfera.github.io/charasort/">this site</a>. Created by: <a href="https://twitter.com/mycelestialz">@mycelestialz</a> and <a href="/">lele</a></p>
+     </div>
+
+</div>
+</body>
+
+</html>
